@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Parsely",
+        "image": "img/vegetable-item-6.jpg",
+        "price": "$4.99 / kg",
+        "description": "Fresh and organic parsely perfect for cooking."
+    },
+    {
+        "name": "Banana",
+        "image": "img/vegetable-item-3.png",
+        "price": "$7.99 / kg",
+        "description": "Sweet bananas sourced from organic farms."
+    },
+    {
+        "name": "Bell Pepper",
+        "image": "img/vegetable-item-4.jpg",
+        "price": "$6.49 / kg",
+        "description": "Colorful and crisp bell peppers."
+    },
+    {
+        "name": "Potatoes",
+        "image": "img/vegetable-item-5.jpg",
+        "price": "$2.99 / kg",
+        "description": "Locally grown, versatile potatoes."
+    }
+]
