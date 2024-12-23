@@ -581,4 +581,424 @@ h1 {
     line-height: 35px;
 }
 /*** Footer End ***/
+@media (max-width: 576px) {
+    .owl-carousel .item {
+        flex: 0 0 calc(50% - 10px); /* Chaque produit occupe 50% de la largeur */
+        max-width: calc(50% - 10px);
+        margin: 5px; /* Espace entre les produits */
+        box-sizing: border-box; /* Inclut les marges/paddings dans la largeur */
+    }
 
+    .owl-carousel {
+        display: flex; /* Utilise flexbox pour organiser les items */
+        flex-wrap: wrap; /* Permet aux produits de passer à la ligne */
+        justify-content: space-between; /* Ajoute un espace équilibré entre les produits */
+    }
+}
+/* Style de la sidebar */
+/* Animation pour l'ouverture du panier */
+
+
+
+.cart-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initialement masqué sur la droite */
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.5s ease; /* Animation fluide pour l'ouverture */
+}
+
+/* Quand le panier est visible */
+.cart-sidebar.show {
+    right: 0; /* Affichage du panier en glissant vers la gauche */
+}
+
+/* Style du bouton du panier */
+/* Style du bouton avec fond blanc, cadre vert et coins arrondis */
+.cart-button {
+    background-color: white;
+    border: 2px solid #28a745; /* Bordure verte */
+    color: #28a745; /* Texte vert */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px; /* Coins arrondis */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Effet de survol du bouton */
+.cart-button:hover {
+    background-color: #28a745; /* Fond vert lors du survol */
+    color: white; /* Texte blanc */
+    border: 2px solid #28a745;
+}
+
+
+/* Panier avec contenu */
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#cart-item {
+    margin-bottom: 20px;
+}
+
+/* Animation pour afficher le panier avec un fond transparent */
+.cart-sidebar .sidebar-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cart-sidebar.show .sidebar-content {
+    opacity: 1;
+}
+
+
+
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#cart-item {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.sidebar {
+    width: 30%; /* Prend toute la largeur de l'écran */
+    height: 100%; /* Prend toute la hauteur de l'écran */
+    position: fixed; /* Positionne la sidebar de manière fixe */
+    top: 0;
+    right: -100%; /* Initialement masquée sur la droite */
+    background-color: rgb(255, 255, 255); /* Fond semi-transparent */
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    transition: right 0.3s ease; /* Animation pour l'ouverture */
+    z-index: 9999; /* Assure que la sidebar est au-dessus des autres éléments */
+    overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
+}
+
+.sidebar.open {
+    right: 0; /* Affiche la sidebar */
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #45a049;
+    color: white;
+    border: none;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+
+/* Style du bouton panier */
+
+/* Style du bouton avec fond blanc, cadre vert et coins arrondis */
+.cart-button {
+    background-color: white;
+    border: 2px solid #ffb524b3; /* Bordure verte */
+    color: #28a745; /* Texte vert */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px; /* Coins arrondis */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex; /* Utilisation de flex pour aligner l'icône et le texte */
+    align-items: center; /* Centrer l'icône et le texte verticalement */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Effet de survol du bouton */
+.cart-button:hover {
+    background-color: #ffb524b3; /* Fond vert lors du survol */
+    color: white; /* Texte blanc */
+    border: 2px solid #ffb524b3;
+}
+
+/* Espacement entre l'icône et le texte */
+.cart-button i {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+}
+
+
+/* Style du cercle vert pour fermer la sidebar */
+#closeSidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#closeSidebar:hover {
+    background-color: #9e9e9e;
+}
+
+/* Style des éléments du panier dans la sidebar */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.product-details {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-button {
+    background-color: #cdcbc9;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.quantity-button:hover {
+    background-color: #ec971f;
+}
+
+.quantity-display {
+    font-size: 14px;
+}
+
+.remove-button {
+    background-color: #d9534f;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #b5b5b5;
+}
+
+/* Style pour les boutons - et + (cercles) */
+.quantity-circle {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-circle:hover {
+    background-color: #ec971f;
+}
+
+/* Style pour le bouton X (cercle rouge pour supprimer) */
+.remove-circle {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-circle:hover {
+    background-color: #c82333;
+}
+
+/* Style de l'élément du panier */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Image du produit */
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Détails du produit */
+.product-details {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+/* Wrapper pour la quantité */
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Affichage de la quantité */
+.quantity-display {
+    font-size: 14px;
+}
+/* Style des icônes dans des cercles */
+.icon-circle {
+    background-color: #cfcfcf;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Taille de l'icône */
+}
+
+.icon-circle:hover {
+    background-color: #cfcfcf;
+}
+
+/* Style pour le bouton X (cercle rouge pour supprimer) */
+.icon-circle.remove {
+    background-color: #dc3545;
+}
+
+.icon-circle.remove:hover {
+    background-color: #c82333;
+}
+
+/* Style de l'élément du panier */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+/* Image du produit */
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Détails du produit */
+.product-details {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+/* Wrapper pour la quantité */
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 90px; /* Fixer la largeur minimale pour éviter les déplacements */
+}
+
+/* Affichage de la quantité */
+.quantity-display {
+    font-size: 14px;
+    width: 30px; /* Fixer une largeur fixe pour éviter les déplacements */
+    text-align: center; /* Centrer le nombre */
+}
+
+/* Ajuster l'espace entre les boutons et la quantité */
+.quantity-wrapper .icon-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 18px; /* Garder une taille d'icône fixe */
+}
+.icon-circle-rm {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Taille de l'icône */
+}
+
+.icon-circle-rm:hover {
+    background-color: #cfcfcf;
+}
