@@ -687,7 +687,7 @@ button:hover {
     background-color: #45a049;
 }
 .sidebar {
-    width: 30%; /* Prend toute la largeur de l'écran */
+    width: 50%; /* Prend toute la largeur de l'écran */
     height: 100%; /* Prend toute la hauteur de l'écran */
     position: fixed; /* Positionne la sidebar de manière fixe */
     top: 0;
